@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #e31e24; 
+    --dark-bg: #111;
+    --text-dark: #333;
+    --gray-text: #777;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.navbar {
+     background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+       position: sticky; 
+       top: 0; 
+       z-index: 1000; 
+    }
+.nav-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #eee; 
+    }
+.logo { 
+    font-size: 
+    1.8rem; 
+    font-weight: 800; }
+.logo span { color: var(--primary-color); }
+.search-box { 
+    display: flex;
+     background: #f0f2f5;
+      border-radius: 25px;
+       padding: 5px 15px;
+        width: 300px; }
+.search-box input { border: none; 
+    background: none; 
+    outline: none;
+    width: 100%;
+    padding: 8px; 
+    font-family: inherit; }
+.search-box button { 
+    border: none;
+     background: none; 
+     cursor: pointer; 
+     color: var(--gray-text); }
+
+.nav-bottom {
+     background: var(--dark-bg);
+      padding: 10px 0; 
+      display: flex;
+       justify-content: center; }
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px;
+     margin: 0;
+      padding: 0; }
+.nav-links a { 
+    color: #ccc; 
+    text-decoration: none;
+     font-size: 0.95rem;
+      transition: 0.3s;
+     }
+.nav-links a:hover, .nav-links a.active { 
+    color: var(--white);
+    font-weight: bold; }
+
+.ticker-wrapper { display: flex; 
+    background: var(--white); 
+    height: 40px; align-items: center;
+     border-bottom: 2px solid var(--primary-color);
+     }
+.ticker-title { 
+    background: var(--primary-color);
+     color: white; padding: 0 20px; 
+     font-weight: bold; height: 100%;
+      display: flex; align-items: center; 
+    }
+
+.container {
+     max-width: 1200px;
+     margin: 30px auto;
+      padding: 0 20px; }
+
+.news-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+     gap: 30px; }
+
+.news-card {
+     background: white;
+     border-radius: 12px;
+      overflow: hidden;
+       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        transition: 0.3s;
+         display: flex;
+          flex-direction: column;
+         }
+.news-card:hover { 
+    transform: translateY(-10px);
+ }
+
+.img-container {
+     position: relative; 
+     height: 230px;
+     }
+.img-container img { 
+    width: 100%;
+     height: 100%;
+      object-fit: cover; 
+    }
+.source-badge { position: absolute;
+     top: 15px; 
+     right: 15px;
+      background: rgba(0,0,0,0.7); 
+      color: white;
+       padding: 5px 12px;
+        border-radius: 5px; 
+        font-size: 0.8rem; }
+
+.news-content {
+     padding: 20px;
+      flex-grow: 1; 
+      display: flex;
+       flex-direction: column;
+     }
+.meta-info { 
+    display: flex; 
+    gap: 15px; 
+    font-size: 0.8rem; 
+    color: var(--gray-text); 
+    margin-bottom: 12px; }
+.news-content h3 {
+     font-size: 1.2rem;
+      margin: 0 0 12px 0; 
+      line-height: 1.4;
+       color: #000; }
+.description { font-size: 0.9rem; 
+    color: #555;
+     line-height: 1.6;
+      margin-bottom: 15px; 
+    }
+.content-excerpt { font-size: 0.85rem; 
+    color: #888;
+     background: #f9f9f9; 
+     padding: 10px;
+      border-right: 4px solid var(--primary-color);
+       margin-bottom: 15px; 
+       font-style: italic; }
+
+.card-footer {
+     margin-top: auto; 
+     border-top: 1px solid #eee;
+      padding-top: 15px; }
+.read-more {
+     color: var(--primary-color);
+      text-decoration: none; 
+      font-weight: bold; font-size:
+       0.9rem; display: flex; 
+       align-items: center; 
+       gap: 5px; }
+
+@media (max-width: 768px) {
+    .nav-links {
+         overflow-x: auto;
+          white-space: nowrap; 
+          width: 100%;
+           padding: 0 15px; 
+        }
+    .search-box { 
+        display: none; 
+    }
+}

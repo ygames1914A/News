@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة مصر </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-top">
+            <div class="date" id="current-date"></div>
+            <div class="logo">مصر<span>الآن</span></div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="ابحث عن أخبار...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <div class="nav-bottom">
+            <ul class="nav-links">
+                <li><a href="#" class="active" data-category="general">الرئيسية</a></li>
+                <li><a href="#" data-category="world">أخبار عالمية</a></li>
+                <li><a href="#" data-category="business">اقتصاد</a></li>
+                <li><a href="#" data-category="sports">رياضة</a></li>
+                <li><a href="#" data-category="technology">تكنولوجيا</a></li>
+                <li><a href="#" data-category="science">علوم</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="ticker-wrapper">
+        <div class="ticker-title">عاجل</div>
+        <div class="ticker-text">
+            <marquee id="breaking-news" scrollamount="6">جاري تحميل آخر العناوين...</marquee>
+        </div>
+    </div>
+
+    <main class="container">
+        <div id="news-grid" class="news-grid">
+            
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
