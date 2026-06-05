@@ -1,7 +1,7 @@
 const API_KEY = `88bf36fa19025cef6c0c80cb59985cf3`
 
 async function fetchNews(category = 'general') {
-    let url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=ar&country=eg&max=10&apikey=${API_KEY}`
+    let url = `https://news-backend-production-fd5e.up.railway.app/?category=${category}&apikey=${API_KEY}`
 
     try {
         const response = await fetch(url)
